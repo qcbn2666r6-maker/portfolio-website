@@ -1848,7 +1848,9 @@
                     "Enhanced campaign discovery experience",
                     "Increased average transaction value"
                 ],
-                tags: ["AI/ML", "Personalization", "Collaborative Filtering", "Crowdfunding"]
+                tags: ["AI/ML", "Personalization", "Collaborative Filtering", "Crowdfunding"],
+                ctaText: "Request Full Case Study",
+                ctaAction: "contact"
             },
             {
                 id: 2,
@@ -1865,7 +1867,9 @@
                     "Won over five high-impact campaigners with 2M+ campaigns",
                     "Achieved cash-positive status by EOQ"
                 ],
-                tags: ["Network Effects", "Growth Strategy", "User Research", "Marketplace"]
+                tags: ["Network Effects", "Growth Strategy", "User Research", "Marketplace"],
+                ctaText: "Request Full Case Study",
+                ctaAction: "contact"
             },
             {
                 id: 3,
@@ -1882,12 +1886,14 @@
                     "Analysis time reduced from 1 day to seconds",
                     "Expanded data access across agency teams"
                 ],
-                tags: ["B2B SaaS", "Public Transport", "Cloud Analytics", "Data Visualization"]
+                tags: ["B2B SaaS", "Public Transport", "Cloud Analytics", "Data Visualization"],
+                ctaText: "Request Full Case Study",
+                ctaAction: "contact"
             },
             {
                 id: 4,
                 title: "Growth Experiments & A/B Testing",
-                category: "b2c",
+                category: "b2c mobile",
                 icon: '<img src="portfolio-website/src/assets/progressive-disclosure.png" alt="Growth Experiments & A/B Testing" style="width: 100%; height: 100%; object-fit: cover;">',
                 excerpt: "Ran systematic growth experiments on campaign pages and payflow, achieving 3% conversion rate increase through Progressive Disclosure.",
                 overview: "Addressed conversion rate challenges from campaign funding page through payment confirmation, optimizing the contributor experience.",
@@ -1899,7 +1905,28 @@
                     "Established systematic A/B testing framework",
                     "Improved contributor checkout experience"
                 ],
-                tags: ["A/B Testing", "Growth Experiments", "Conversion Optimization", "UX Design"]
+                tags: ["A/B Testing", "Growth Experiments", "Conversion Optimization", "UX Design"],
+                ctaText: "Request Full Case Study",
+                ctaAction: "contact"
+            },
+            {
+                id: 5,
+                title: "Democratizing Access to Music Creation: Narrative Development",
+                category: "b2c",
+                icon: '<img src="portfolio-website/src/assets/garageband.png" alt="Democratizing Access to Music Creation" style="width: 100%; height: 100%; object-fit: cover;">',
+                excerpt: "In this role I was responsible for the narrative around Apple's line of creative applications. Apple's creative apps democratize access to production tools and allow both consumers and professionals to work with photos, videos, and music on their Macs, iPhones, and iPads. Specifically this product portfolio includes the consumer software - iLife for the Mac (iPhoto, iMovie, GarageBand), the mobile versions of those apps, as well as the professional applications Aperture, Logic Pro, Final Cut Pro.",
+                overview: "Developed product narrative and strategy to democratize music creation tools for a broader audience.",
+                challenge: "Music creation has traditionally required expensive equipment, years of training, and technical expertise. This created significant barriers preventing everyday people from expressing themselves through music.",
+                approach: "Conducted user research to understand the needs of aspiring music creators. Developed a compelling product narrative centered on accessibility and empowerment. Collaborated with design and engineering teams to simplify complex music creation workflows.",
+                results: [
+                    "Expanded access to music creation tools",
+                    "Simplified user onboarding experience",
+                    "Increased engagement among new creators",
+                    "Developed compelling brand narrative"
+                ],
+                tags: ["Narrative Development", "Accessibility", "Music Tech", "User Empowerment"],
+                ctaText: "Request Full Case Study",
+                ctaAction: "contact"
             }
         ];
 
@@ -2053,7 +2080,7 @@
 
         function renderFeaturedProjects() {
             const container = document.getElementById('featured-projects');
-            container.innerHTML = projectsData.slice(0, 4).map(createProjectCard).join('');
+            container.innerHTML = projectsData.slice(0, 5).map(createProjectCard).join('');
             setTimeout(animateOnScroll, 100);
         }
 
@@ -2066,7 +2093,7 @@
                     <div class="case-study-header">
                         <div class="case-study-image">${project.icon}</div>
                         <div class="case-study-intro">
-                            <span class="project-category">${project.category.toUpperCase()}</span>
+                            <div style="display: flex; gap: 8px;">${project.category.split(' ').map(cat => `<span class="project-category">${cat.toUpperCase()}</span>`).join('')}</div>
                             <h3>${project.title}</h3>
                             <p>${project.excerpt}</p>
                             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px;">
@@ -2092,10 +2119,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="expand-btn">
-                        <span class="expand-text">Show Details</span>
-                        <span class="arrow">▼</span>
-                    </button>
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--color-light-grey);">
+                        <button class="expand-btn" style="flex: 1;">
+                            <span class="expand-text">Show Details</span>
+                            <span class="arrow">▼</span>
+                        </button>
+                        ${project.ctaText ? `<a href="#" class="btn cta-details" data-action="${project.ctaAction}" style="margin: 8px 16px; display: inline-flex; font-size: 0.85rem; background: var(--color-medium-grey); color: var(--color-white); padding: 8px 16px;">${project.ctaText} <span>→</span></a>` : ''}
+                    </div>
                 </article>
             `;
         }
@@ -2104,7 +2134,7 @@
             const container = document.getElementById('case-studies-container');
             const filtered = filter === 'all'
                 ? projectsData
-                : projectsData.filter(p => p.category === filter);
+                : projectsData.filter(p => p.category.includes(filter));
 
             container.innerHTML = filtered.map(createCaseStudyCard).join('');
 
@@ -2115,6 +2145,16 @@
                     card.classList.toggle('expanded');
                     btn.querySelector('.expand-text').textContent =
                         card.classList.contains('expanded') ? 'Hide Details' : 'Show Details';
+                });
+            });
+
+            // CTA button handlers
+            container.querySelectorAll('.cta-details').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (btn.dataset.action === 'contact') {
+                        openContactModal();
+                    }
                 });
             });
 
