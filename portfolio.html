@@ -1396,7 +1396,7 @@
          ========================================== -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-container">
-            <a href="#" class="logo" data-page="home">Chris<span>tine</span></a>
+            <a href="#" class="logo" data-page="home">Christine <span>Wilhelmy</span></a>
 
             <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
@@ -1426,8 +1426,10 @@
         <section class="hero">
             <div class="hero-background"></div>
 
-            <!-- Profile Picture Placeholder -->
-            <div class="hero-profile">👤</div>
+            <!-- Profile Picture -->
+            <div class="hero-profile">
+                <img src="portfolio-website/src/assets/profile.jpg" alt="Christine - Product Manager" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            </div>
 
             <div class="container hero-content">
                 <p class="hero-subtitle">Product Manager</p>
@@ -1459,16 +1461,18 @@
                     <div class="intro-text">
                         <h2>About <span>Me</span></h2>
                         <p>
-                            I'm a Product Manager with a passion for creating technology that makes
-                            a real difference in people's lives. Originally from Germany, I was
-                            brought to the US by Apple, where I discovered my love for building
-                            products at the intersection of design, technology, and human needs.
+                            Product Manager with expertise in driving growth for B2B and B2C platforms
+                            through data-driven experimentation and user-centered design. Proven track
+                            record scaling marketplaces and SaaS products at Apple and high-growth startups,
+                            delivering measurable impact including 42% quarter-over-quarter growth in active
+                            users, 20% reduction in operational inefficiencies, and consistent conversion
+                            rate improvements through systematic A/B testing.
                         </p>
                         <p>
-                            With over 8 years of experience in product management, I've led
-                            cross-functional teams to ship products used by millions. I believe
-                            the best products come from deeply understanding user problems and
-                            iterating rapidly based on feedback.
+                            Skilled at leveraging network effects, recommendation algorithms, and API
+                            integrations to create scalable product experiences. Strong technical background
+                            with M.A. in Information Science and hands-on experience with SQL, experimentation
+                            frameworks, and cross-functional collaboration.
                         </p>
 
                         <div class="intro-highlights">
@@ -1509,15 +1513,15 @@
                             <div class="stat-label">M+ Revenue</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number" data-target="25">25</div>
+                            <div class="stat-number" data-target="37">37</div>
                             <div class="stat-label">Products Shipped</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number" data-target="8">8</div>
+                            <div class="stat-number" data-target="10">10+</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number" data-target="5">5</div>
+                            <div class="stat-number" data-target="10">10</div>
                             <div class="stat-label">M+ Users</div>
                         </div>
                     </div>
@@ -1584,7 +1588,9 @@
             <div class="about-header">
                 <div class="container">
                     <div class="about-header-content">
-                        <div class="about-avatar">👤</div>
+                        <div class="about-avatar">
+                            <img src="portfolio-website/src/assets/profile.jpg" alt="Christine - Product Manager" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
                         <div class="about-header-text">
                             <h1>Christine</h1>
                             <p>Product Manager passionate about building tools that empower people and create positive social impact through technology.</p>
@@ -1829,75 +1835,71 @@
         const projectsData = [
             {
                 id: 1,
-                title: "E-Commerce Platform Redesign",
+                title: "Recommendation Engine",
                 category: "b2c",
-                icon: "🛒",
-                excerpt: "Led a complete redesign resulting in 40% increase in conversion rates and $15M additional revenue.",
-                overview: "Spearheaded the end-to-end redesign of an e-commerce platform serving 2M+ monthly active users.",
-                challenge: "High cart abandonment (78%), confusing navigation, 8-minute checkout. Mobile = 60% traffic but only 25% conversions.",
-                approach: "Led cross-functional team of 12 engineers, 3 designers, 2 analysts. 50+ user interviews, heat map analysis, A/B tests. Mobile-first 3-step checkout.",
+                icon: '<img src="portfolio-website/src/assets/recommendation-engine.png" alt="Recommendation Engine" style="width: 100%; height: 100%; object-fit: cover;">',
+                excerpt: "Led development of algorithms for recommendation engines, leveraging itemized collaborative filtering to boost multi-campaign contributions by 15%.",
+                overview: "Developed AI-powered recommendation system for Indiegogo's crowdfunding platform to increase contributor engagement across multiple campaigns.",
+                challenge: "Indiegogo is a crowdfunding platform with diverse campaigns ranging from electronics to beauty products. Most contributors arrive to support a specific campaign and leave after contributing, missing other relevant opportunities. Contributors land on specific campaign pages rather than the homepage, limiting cross-campaign discovery.",
+                approach: "Implemented Itemized Collaborative Filtering as the AI personalization technique. This approach avoids pigeonholing contributors while making relevant campaign suggestions—just because you came to support a tech campaign doesn't mean you wouldn't be interested in food campaigns.",
                 results: [
-                    "40% increase in conversion rate",
-                    "Checkout time reduced from 8 to 2 minutes",
-                    "Mobile conversions increased 85%",
-                    "Cart abandonment decreased to 52%",
-                    "$15M additional annual revenue"
+                    "15% increase in multi-campaign contributions",
+                    "Improved contributor engagement across platform",
+                    "Enhanced campaign discovery experience",
+                    "Increased average transaction value"
                 ],
-                tags: ["User Research", "A/B Testing", "Mobile-First", "Conversion Optimization"]
+                tags: ["AI/ML", "Personalization", "Collaborative Filtering", "Crowdfunding"]
             },
             {
                 id: 2,
-                title: "SaaS Analytics Dashboard",
-                category: "b2b",
-                icon: "📊",
-                excerpt: "Built enterprise analytics platform from scratch, now used by 500+ companies including Fortune 500s.",
-                overview: "Conceived and launched B2B analytics dashboard providing real-time business intelligence to enterprise customers.",
-                challenge: "Enterprise customers needed unified data view across 50+ tools. Existing solutions too complex or too limited.",
-                approach: "Product-led growth with freemium model. Weekly customer feedback sessions. Self-service onboarding and template library.",
+                title: "Network Effect as Growth Strategy",
+                category: "b2c",
+                icon: '<img src="portfolio-website/src/assets/network-effect-marketplace.png" alt="Network Effect as Growth Strategy" style="width: 100%; height: 100%; object-fit: cover;">',
+                excerpt: "Leveraged Network Effects to drive marketplace growth, achieving 42% increase in campaigner onboarding and 15% revenue increase q/q.",
+                overview: "Developed growth strategy to attract high-impact crowdfunders to the Indiegogo platform during a critical period of market fatigue.",
+                challenge: "After rapid early-stage growth, crowdfunding platforms faced market fatigue. Shifting consumer behavior alarmed investors, demanding improved net burn rates and cash-positive status by end of quarter. The key question: How can we attract established crowdfunders with sizable, loyal communities to use our platform?",
+                approach: "Conducted user research to understand why successful crowdfunders avoided Indiegogo. Found key blockers: legacy campaign page editor, no preview capability before going live. Used RICE prioritization to identify high-impact, low-effort solutions. Key feature: staging environment for campaign preview. Created milestones for CES launch, exclusive access for new campaigners, and ongoing feedback collection.",
                 results: [
-                    "500+ enterprise customers in 18 months",
-                    "$8M ARR within first year",
-                    "NPS score of 72",
-                    "Time-to-value reduced to 15 minutes",
-                    "Featured in Gartner Magic Quadrant"
+                    "42% increase in new campaigner onboarding",
+                    "15% revenue increase quarter-over-quarter",
+                    "Won over five high-impact campaigners with 2M+ campaigns",
+                    "Achieved cash-positive status by EOQ"
                 ],
-                tags: ["Product-Led Growth", "Enterprise SaaS", "Data Visualization", "Freemium"]
+                tags: ["Network Effects", "Growth Strategy", "User Research", "Marketplace"]
             },
             {
                 id: 3,
-                title: "Mobile Banking App",
-                category: "mobile",
-                icon: "🏦",
-                excerpt: "Launched mobile-first banking experience that acquired 1M users in first 6 months with 4.8 star rating.",
-                overview: "Led development of next-gen mobile banking app for millennials and Gen-Z with gamification and social features.",
-                challenge: "Traditional banking apps seen as boring and complex. Target users wanted experience like their favorite social apps.",
-                approach: "Ethnographic research with 200+ participants aged 18-35. Gamification, achievement badges, social features. Viral referral program.",
+                title: "Network Effect as Growth Strategy (Mobility)",
+                category: "b2b",
+                icon: '<img src="portfolio-website/src/assets/feature-in-context.png" alt="Network Effect - Mobility" style="width: 100%; height: 100%; object-fit: cover;">',
+                excerpt: "Drove adoption of cloud-based analytics tools in public transport, increasing on-time performance by 12% while reducing late fees.",
+                overview: "Initiated and managed development of the 'Operators Report,' allowing analysis of schedule adherence within seconds instead of a day.",
+                challenge: "Public Transport Agencies use capital-intensive legacy systems to capture and process data, paid by seat. Only a few people have access to relevant data within an agency. Analysts often need a full day to go through hundreds of pages to find the root cause of an issue.",
+                approach: "Introduced cloud-based solutions providing relevant and actionable insights from existing agency data. Conducted user research to understand pain points, mapped current experience, identified critical information needs. Designed visual dashboards for meaningful data presentation. Tested prototypes with Customer Council of Operations leaders in Public Transport.",
                 results: [
-                    "1M users acquired in 6 months",
-                    "4.8 star App Store rating",
-                    "45% daily active users",
-                    "Viral coefficient of 1.4",
-                    "Best FinTech Innovation award"
+                    "12% increase in on-time performance (OTP Adherence)",
+                    "Reduced late fees for transport agencies",
+                    "Analysis time reduced from 1 day to seconds",
+                    "Expanded data access across agency teams"
                 ],
-                tags: ["Mobile App", "FinTech", "Gamification", "Viral Growth"]
+                tags: ["B2B SaaS", "Public Transport", "Cloud Analytics", "Data Visualization"]
             },
             {
                 id: 4,
-                title: "B2B Marketplace Platform",
-                category: "b2b",
-                icon: "🏪",
-                excerpt: "Created two-sided marketplace connecting 10,000+ suppliers with enterprise buyers, $50M GMV year one.",
-                overview: "Built B2B marketplace revolutionizing enterprise procurement with automated workflows and spending analytics.",
-                challenge: "Enterprise procurement fragmented across systems. Rogue spending and missed savings. Suppliers couldn't reach enterprise buyers.",
-                approach: "Solved chicken-and-egg: free supplier onboarding, direct sales for buyers. Trust system with verified badges and transaction protection.",
+                title: "Growth Experiments & A/B Testing",
+                category: "b2c",
+                icon: '<img src="portfolio-website/src/assets/progressive-disclosure.png" alt="Growth Experiments & A/B Testing" style="width: 100%; height: 100%; object-fit: cover;">',
+                excerpt: "Ran systematic growth experiments on campaign pages and payflow, achieving 3% conversion rate increase through Progressive Disclosure.",
+                overview: "Addressed conversion rate challenges from campaign funding page through payment confirmation, optimizing the contributor experience.",
+                challenge: "We were cannibalizing our campaigners' marketing success through low conversion rates from the campaign funding page to the 'Thank You' page where payment is confirmed. Needed to find pain points in the campaign page and payflow where crowdfunders were dropping off.",
+                approach: "Step 1: Collected hypotheses on conversion rate blockers through data analysis and customer feedback. Step 2: Prioritized by estimated impact and engineering/design effort. Strategy 1: Productized successful merchandising tactics (e.g., urgency timers on Perk Cards). Strategy 2: Created series of growth experiments based on design changes to Perk Cards and payflow.",
                 results: [
-                    "10,000+ suppliers onboarded",
-                    "500+ enterprise buyers",
-                    "$50M GMV in year one",
-                    "Buyers save 23% on procurement",
-                    "Raised $25M Series B"
+                    "3% conversion rate increase through Progressive Disclosure",
+                    "Design changes to perk card had biggest revenue impact",
+                    "Established systematic A/B testing framework",
+                    "Improved contributor checkout experience"
                 ],
-                tags: ["Marketplace", "Enterprise Sales", "Trust & Safety", "Two-Sided Platform"]
+                tags: ["A/B Testing", "Growth Experiments", "Conversion Optimization", "UX Design"]
             }
         ];
 
