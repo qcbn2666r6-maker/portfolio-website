@@ -53,6 +53,19 @@ const Contact = () => {
                 </div>
               </a>
 
+              <a
+                href="tel:+14158465075"
+                className="flex items-center gap-4 text-[#EEEEEE] hover:text-white transition-colors group"
+              >
+                <div className="w-12 h-12 bg-[#DC5F00] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span className="text-xl">📞</span>
+                </div>
+                <div>
+                  <div className="text-sm text-[#686D76]">Phone</div>
+                  <div className="font-medium">+1 415 846 5075</div>
+                </div>
+              </a>
+
               <div className="flex items-center gap-4 text-[#EEEEEE]">
                 <div className="w-12 h-12 bg-[#DC5F00] rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-xl">📍</span>
